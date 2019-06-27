@@ -1,14 +1,6 @@
-# Interview
+# Getting Started
 
-This repo was setup for interview candidates to have a shell to start building a
-simple Rails API and React Frontend application. For the most part it was
-created using `rails new...` and `create-react-app` so it has all the default
-features that you would expect from projects created with those tools if you are
-familiar with them.
-
-## Getting Started
-
-### Ruby Setup
+## Ruby Setup
 
 1. Install Ruby
    You will need ruby installed to get up and running with the project. For this
@@ -23,7 +15,7 @@ Locally clone the repo use `git`
 
 3. Bundle Install
 
-You should be able to run bundler from the '/danger_room' folder to
+You should be able to run bundler from the `/danger_room` folder to
 automatically install all the gems you need to run the ruby part of the application.
 
 ```bash
@@ -38,7 +30,7 @@ $ bundle install
 At this point you should be able to run the application and visit
 `http://localhost:3001` and see you rails started!
 
-#### About the Rails Application
+### About the Rails Application
 
 The Rails backend is actually a full rails project, not generated with `--api`.
 The expectation is that you will probably setup routes for your React project
@@ -46,7 +38,7 @@ inside of the `api` folder in controllers, but if you wanted to add a gem that
 needed to serve html (such as ActiveAdmin for example) you still have the
 flexibility to do that.
 
-### Javascript Setup
+## Javascript Setup
 
 1. Install node with a version >= 8
 
@@ -64,7 +56,7 @@ from inside the `danger_room\client` folder, run the install command
 $ npm install
 ```
 
-#### About the React application
+### About the React application
 
 The frontend is almost entirely vanilla `create-react-app`, with the small
 addition of adding in a proxy to the default rails port. This helps avoid CORS
@@ -78,7 +70,7 @@ the project. You should be able to use the following commands to get both
 server started.
 
 ```bash
-$ rails serve
+$ rails server
 
 # and in another terminal...
 
