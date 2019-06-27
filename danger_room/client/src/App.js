@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [message, setMessage] = useState('');
+  useEffect(() => {
+    fetch('/api/greetings')
+      .then(res => res.json())
+      .then(json => setMessage(json.hello))
+  })
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +25,7 @@ function App() {
         >
           Learn React
         </a>
+        <p> our team would like to say { message } </p>
       </header>
     </div>
   );
