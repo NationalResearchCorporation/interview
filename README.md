@@ -1,40 +1,45 @@
-# Getting Started
+# PatientWisdom Pair Programming Interview
 
-The back-end is a full Rails project, but the expectation is that you will set up API endpoints within the `controllers/api` directory. The `/client` directory is bootstrapped with [Create React App](https://github.com/facebook/create-react-app). The proxy port (to avoid CORS issues) is set to `3001` to easily make requests to the Rails backend.
+Here at PatientWisdom, we support each other as a team. We're constantly faced with tasks that require us to work together to accomplish them, whether it's pair programming, reviewing code or getting opinions about decisions before they're made. This interview is designed to mimic a pair programming session with other engineers on the team.
 
-## Environment Setup
+Our workflow is based on the Agile user-story model, with all feature development organized into stories that provide some background on the feature request (person, need, and purpose) and a set of acceptance criteria that the feature should meet.
 
-1. Install the project Ruby version `2.5.1`
-2. Install Node 8 or higher (the project expects `8.16.0`)
-3. Clone the repository locally
-4. Install gems via `bundle install`
-5. Install NPM packages via `npm install`
+We'd like to have you build the foundation for the exercises you'll work though onsite with the engineering team. We've outlined a story below to get you started.
 
-## Starting the Project
+When you arrive for your onsite interview, please have the above story as complete as possible. However, keep in mind that this exercise is designed to take no more than 2 to 3 hours to complete. If it is taking significantly longer than that, please push up a commit at a good break point and we can pick up where you left off.
 
-You will need to open 2 terminal windows to run both the frontend and backend of
-the project.
+## Getting Started
 
-```bash
-$ rails s
+Please clone this repo and use it as a starting point for your development work. Instructions for how to get up and running are below.
 
-# and in another terminal...
+### Tech Stack
 
-$ npm start
-```
+The frontend should be built in React and the backend should be built in Rails. If you would like to use something else, please ask and we'll do our best to accomodate your request (but keep in mind that the team members you'll be pairing with have to be comfortable with the language so that the pairing sessions are productive).
 
-Open [http://localhost:3000](http://localhost:3000) to view the React front-end in the browser. The page will reload if you make edits, and you will also see any lint errors in the console. The Rails back-end is available at `http://localhost:3001`.
+### Repo Setup
 
-## Gems and Packages
+Follow the [Setup Instructions](/setup.md) to get the base app up and running
 
-You may want to install some Ruby Gems or NPM packages to help build the application. Please be ready to justify why you wanted to
-include the package, and what benefits it brings to the project.
+## Development Task
 
-## Testing
+### Background
 
-### Javascript
-Launch the test runner in the interactive watch mode with `npm test` in the `/client` directory. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests for more information.
+Create a simple API and front-end display for a "News Feed" feature. To keep things simple, there will be no user accounts or hospital-specific requirements. The article content can just be stored as text in the database. There is no need to create a form to add/edit/delete posts for this exercise. To get started, please just provide at least 2 seed posts to show up in the interface.
 
-### Rails
+### User Story
+As a healthcare team member
+I want to be able to view newsfeed items that my administrator posts
+So that I can be informed about changes at the hospital
 
-Launch the [Rspec](https://github.com/rspec/rspec-rails) test suite by running `rspec`
+Acceptance Criteria
+---
+- [ ] There is a page that displays a table of newsfeed articles (just titles)
+- [ ] Clicking on the title of an article brings me to the article's content page
+  - [ ] The article content page consists of a post title and a blob of text
+- [ ] There is a 'Back to Newsfeed' button at the top of every article that takes me back to the main list page
+
+Development Notes
+---
+- Use of a database should be demonstrated in this exercise but there is no particular database required. Rails has SQLite built-in and that is perfectly acceptable.
+- There is no need to create a form to add/edit/delete posts for this exercise.
+- There is no need to support markdown, images or videos for this initial implementation
