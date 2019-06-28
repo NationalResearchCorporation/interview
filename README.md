@@ -56,12 +56,27 @@ from inside the `danger_room\client` folder, run the install command
 $ npm install
 ```
 
-### About the React application
+## About the React application
 
-The frontend is almost entirely vanilla `create-react-app`, with the small
-addition of adding in a proxy to the default rails port. This helps avoid CORS
-issues, and lets you more easily make requests to the backend of the
-application.
+The `/client` directory is bootstrapped with [Create React App](https://github.com/facebook/create-react-app). The proxy port (to avoid CORS issues) is set to `3001` to easily make requests to the Rails backend.
+
+### Available Scripts
+
+In the `/client` directory, you can run:
+
+#### `npm start`
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
+
+#### `npm test`
+
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
 
 ## Starting the Project
 
