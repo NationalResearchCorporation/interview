@@ -18,7 +18,7 @@ The frontend should be built in React and the backend should be built in Rails. 
 
 ### Repo Setup
 
-Follow the [Setup Instructions](/setup.md) to get the base app up and running
+Follow the [Setup Instructions](/SETUP.md) to get the base app up and running
 
 ## Development Task
 
