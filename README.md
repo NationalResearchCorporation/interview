@@ -6,15 +6,15 @@ Our workflow is based on the Agile user-story model, with all feature developmen
 
 We'd like to have you build the foundation for the exercises you'll work though onsite with the engineering team. We've outlined a story below to get you started.
 
-When you arrive for your onsite interview, please have the above story as complete as possible. However, keep in mind that this exercise is designed to take no more than 2 to 3 hours to complete. If it is taking significantly longer than that, please push up a commit at a good break point and we can pick up where you left off.
+When you arrive for your onsite interview, please have the story below as complete as possible. However, keep in mind that this exercise is designed to take no more than 2 to 3 hours to complete. If it is taking significantly longer than that, please push up a commit at a good break point and we can pick up where you left off.
 
 ## Getting Started
 
-Please clone this repo and use it as a starting point for your development work. Instructions for how to get up and running are below.
+Please fork this repo and use it as a starting point for your development work. Instructions for how to get up and running are below. Also, be sure to send us a link to your fork of the repo prior to arriving for your interview.
 
 ### Tech Stack
 
-The frontend should be built in React and the backend should be built in Rails. If you would like to use something else, please ask and we'll do our best to accomodate your request (but keep in mind that the team members you'll be pairing with have to be comfortable with the language so that the pairing sessions are productive).
+The frontend should be built in React and the backend should be built in Rails.
 
 ### Repo Setup
 
@@ -24,22 +24,22 @@ Follow the [Setup Instructions](/SETUP.md) to get the base app up and running
 
 ### Background
 
-Create a simple API and front-end display for a "News Feed" feature. To keep things simple, there will be no user accounts or hospital-specific requirements. The article content can just be stored as text in the database. There is no need to create a form to add/edit/delete posts for this exercise. To get started, please just provide at least 2 seed posts to show up in the interface.
+Add a comments feature to the newsfeed item interface. Each comment should have a user associated to it, which consists of just a username. The comments can just be stored as text in the database. There is no need to create a form to add/edit/delete comments for this exercise. To get started, please just provide at least 2 seed comments for each seeded newsfeed item to show up in the interface. We also expect you to have a suite of tests for your work.
 
 ### User Story
 As a healthcare team member
-I want to be able to view newsfeed items that my administrator posts
-So that I can be informed about changes at the hospital
+I want to be able to see comments made on newsfeed items
+So that I can see what my colleagues think about the articles posted
 
 Acceptance Criteria
 ---
-- [ ] There is a page that displays a table of newsfeed articles (just titles)
-- [ ] Clicking on the title of an article brings me to the article's content page
-  - [ ] The article content page consists of a post title and a blob of text
-- [ ] There is a 'Back to Newsfeed' button at the top of every article that takes me back to the main list page
+- [ ] On the page showing an individual newsfeed item, there is a list of comments related to that post
+- [ ] Each comment has a username associated to it
 
 Development Notes
 ---
 - Use of a database should be demonstrated in this exercise but there is no particular database required. Rails has SQLite built-in and that is perfectly acceptable.
-- There is no need to create a form to add/edit/delete posts for this exercise.
+- There is no need to create a form to add/edit/delete comments for this exercise.
 - There is no need to support markdown, images or videos for this initial implementation
+- There is no need for users to be able to login or session management of any kind.
+- Users should be stored in a separate table from comments

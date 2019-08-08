@@ -9,6 +9,7 @@ The back-end is a full Rails project, but the expectation is that you will set u
 3. Clone the repository locally
 4. Install gems via `bundle install`
 5. Install NPM packages via `npm install`
+6. Run `rails db:migrate db:seed` from the root project directory
 
 ## Starting the Project
 
@@ -20,6 +21,7 @@ $ rails s
 
 # and in another terminal...
 
+$ cd client
 $ npm start
 ```
 
@@ -37,4 +39,4 @@ Launch the test runner in the interactive watch mode with `npm test` in the `/cl
 
 ### Rails
 
-Launch the [Rspec](https://github.com/rspec/rspec-rails) test suite by running `rspec`
+Launch the [Rspec](https://github.com/rspec/rspec-rails) test suite by running `rspec` in the root project directory
