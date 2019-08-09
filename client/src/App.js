@@ -1,34 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-function App() {
-  const [message, setMessage] = useState('');
-  useEffect(() => {
-    fetch('/api/greetings')
-      .then(res => res.json())
-      .then(json => setMessage(json.hello))
-  })
-
+import NewsfeedList from './components/NewsfeedList';
+import NewsfeedItem from './components/NewsfeedItem';
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <p> our team would like to say { message } </p>
-      </header>
+    <div className='App'>
+      <Router>
+        <Route exact path='/' component={NewsfeedList} />
+        <Route path='/:id' component={NewsfeedItem} />
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
