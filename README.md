@@ -27,9 +27,9 @@ Follow the [Setup Instructions](/SETUP.md) to get the base app up and running
 Add a comments feature to the newsfeed item interface. Each comment should have a user associated to it, which consists of just a username. The comments can just be stored as text in the database. There is no need to create a form to add/edit/delete comments for this exercise. To get started, please just provide at least 2 seed comments for each seeded newsfeed item to show up in the interface. We also expect you to have a suite of tests for your work.
 
 ### User Story
-As a healthcare team member
-I want to be able to see comments made on newsfeed items
-So that I can see what my colleagues think about the articles posted
+    As a healthcare team member
+    I want to be able to see comments made on newsfeed items
+    So that I can see what my colleagues think about the articles posted
 
 Acceptance Criteria
 ---
