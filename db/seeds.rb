@@ -11,3 +11,4 @@ Newsfeed.all.destroy_all
 
 FactoryBot.create_list(:newsfeed, 20)
 
+puts "Refreshed the newsfeed with 20 new items :)"
