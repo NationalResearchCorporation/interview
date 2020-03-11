@@ -11,4 +11,27 @@ Newsfeed.all.destroy_all
 
 FactoryBot.create_list(:newsfeed, 20)
 
-puts "Refreshed the newsfeed with 20 new items :)"
+@feeds = Newsfeed.all
+
+User.create!(name: "Fred")
+@id = 0
+@feeds.each do |feed|
+  @id = @id + 1
+  Comment.create!(body: "Fred's Comment " + @id.to_s, user_id: User.last.id, newsfeed_id: feed.id)
+end
+
+User.create!(name: "Sue")
+@id = 0
+@feeds.each do |feed|
+  @id = @id + 1
+  Comment.create!(body: "Sue's Comment " + @id.to_s, user_id: User.last.id, newsfeed_id: feed.id)
+end
+
+User.create!(name: "Bella")
+@id = 0
+@feeds.each do |feed|
+  @id = @id + 1
+  Comment.create!(body: "Bella's Comment " + @id.to_s, user_id: User.last.id, newsfeed_id: feed.id)
+end
+
+puts "Refreshed the newsfeed with 20 new items, three new users, and a comment on each feed from each user :)"

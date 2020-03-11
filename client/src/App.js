@@ -10,7 +10,7 @@ const App = () => {
     <div className='App'>
       <Router>
         <Route exact path='/' component={NewsfeedList} />
-        <Route path='/:id' component={NewsfeedItem} />
+        <Route path='/newsfeeds/:id' component={NewsfeedItem} />
       </Router>
     </div>
   );

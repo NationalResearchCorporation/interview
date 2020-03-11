@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :greetings, only: [:index]
-    resources :newsfeeds, only: [:index, :show]
+    resources :newsfeeds, only: [:index, :show] do
+      resources :comments
+    end
+    resources :comments
   end
 end
