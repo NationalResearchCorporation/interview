@@ -4,8 +4,8 @@ The back-end is a full Rails project, but the expectation is that you will set u
 
 ## Environment Setup
 
-1. Install the project Ruby version `2.5.1`
-2. Install Node 8 or higher (the project expects `8.16.0`)
+1. Install the project Ruby version `2.6.5`
+2. Install Node 12 or higher (the project expects `12.16.2`)
 3. Clone the repository locally
 4. Install gems via `bundle install`
 5. Install NPM packages via `npm install`
@@ -35,6 +35,7 @@ include the package, and what benefits it brings to the project.
 ## Testing
 
 ### Javascript
+
 Launch the test runner in the interactive watch mode with `npm test` in the `/client` directory. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### Rails
