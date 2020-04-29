@@ -5,7 +5,7 @@ The back-end is a full Rails project, but the expectation is that you will set u
 ## Environment Setup
 
 1. Install the project Ruby version `2.6.5`
-2. Install Node 12 or higher (the project expects `12.16.2`)
+2. Install Node `12.16.2`
 3. Clone the repository locally
 4. Install gems via `bundle install`
 5. Install NPM packages via `npm install`
