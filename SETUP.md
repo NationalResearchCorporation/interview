@@ -35,7 +35,7 @@ include the package, and what benefits it brings to the project.
 ## Testing
 
 ### Javascript
-Launch the test runner in the interactive watch mode with `npm test` in the `/client` directory. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests for more information.
+Launch the test runner in the interactive watch mode with `npm test` in the `/client` directory. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### Rails
 
