@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_08_134440) do
+ActiveRecord::Schema.define(version: 2021_03_15_161331) do
 
   create_table "newsfeeds", force: :cascade do |t|
     t.string "title", null: false
@@ -19,4 +19,9 @@ ActiveRecord::Schema.define(version: 2019_08_08_134440) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 end

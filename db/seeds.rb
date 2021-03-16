@@ -8,6 +8,7 @@
 #
 
 Newsfeed.all.destroy_all
+User.all.destroy_all
 
 FactoryBot.create_list(:newsfeed, 20)
 
