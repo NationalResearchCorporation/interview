@@ -2,12 +2,12 @@
 
 class Api::NewsfeedsController < ApplicationController
   def index
-    render json: Newsfeed.all
+    render json: Newsfeed.all, include: [comments: { include: :user }]
   end
 
   def show
     newsfeed = Newsfeed.find(params[:id].to_i)
-    render json: newsfeed
+    render json: newsfeed, include: [comments: { include: :user }]
   rescue ActiveRecord::RecordNotFound
     head :not_found
   end
