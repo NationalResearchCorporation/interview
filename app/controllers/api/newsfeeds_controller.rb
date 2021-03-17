@@ -2,7 +2,7 @@
 
 class Api::NewsfeedsController < ApplicationController
   def index
-    render json: Newsfeed.all, include: [comments: { include: :user }]
+    render json: Newsfeed.all
   end
 
   def show
