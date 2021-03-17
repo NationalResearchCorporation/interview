@@ -18,6 +18,16 @@ const NewsfeedItem = ({
       </Link>
       <h1> {currentItem.title} </h1>
       <p> {currentItem.content} </p>
+      {currentItem.comments && currentItem.comments.map(({ id, value, user }) => {
+          return (
+            <div key={id}>
+              <hr />
+              <p>{value}</p>
+              <p>-{user.username}</p>
+            </div>
+          );
+        })
+      }
     </div>
   );
 };
