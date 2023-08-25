@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "@NationalResearchCorporation/pw-developers"
+    reviewers:
+      - "@NationalResearchCorporation/pw-developers"
+    allow:
+      - dependency-type: "production"
+    ignore:
+      - update-types: [ "version-update:semver-patch" ]
+        dependency-name: "*"
+    open-pull-requests-limit: 1
